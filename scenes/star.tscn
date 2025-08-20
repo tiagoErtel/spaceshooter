@@ -1,0 +1,64 @@
+[gd_scene load_steps=15 format=3 uid="uid://c35t1dvfyap4h"]
+
+[ext_resource type="Texture2D" uid="uid://dtqxtf80m1nka" path="res://kenney_space-shooter-redux/PNG/Star/star_00.png" id="1_g4ep7"]
+[ext_resource type="Texture2D" uid="uid://dbcx14ok4bvjx" path="res://kenney_space-shooter-redux/PNG/Star/star_01.png" id="2_s0git"]
+[ext_resource type="Texture2D" uid="uid://be3fvtjrfmyd6" path="res://kenney_space-shooter-redux/PNG/Star/star_02.png" id="3_4nmqm"]
+[ext_resource type="Texture2D" uid="uid://lcht1jaw14bp" path="res://kenney_space-shooter-redux/PNG/Star/star_03.png" id="4_3qv0s"]
+[ext_resource type="Texture2D" uid="uid://c7pcqbww6ye6r" path="res://kenney_space-shooter-redux/PNG/Star/star_04.png" id="5_twfhd"]
+[ext_resource type="Texture2D" uid="uid://p1cul01140k6" path="res://kenney_space-shooter-redux/PNG/Star/star_05.png" id="6_np3v5"]
+[ext_resource type="Texture2D" uid="uid://dmau038ktge81" path="res://kenney_space-shooter-redux/PNG/Star/star_06.png" id="7_jmoh7"]
+[ext_resource type="Texture2D" uid="uid://b1nymvcjnv7wr" path="res://kenney_space-shooter-redux/PNG/Star/star_07.png" id="8_kmh0x"]
+[ext_resource type="Texture2D" uid="uid://d3le38w4cq51y" path="res://kenney_space-shooter-redux/PNG/Star/star_08.png" id="9_jttqs"]
+[ext_resource type="Texture2D" uid="uid://bu4knwln4m5n0" path="res://kenney_space-shooter-redux/PNG/Star/star_09.png" id="10_pybc0"]
+[ext_resource type="Texture2D" uid="uid://cvpavypcqon4i" path="res://kenney_space-shooter-redux/PNG/Star/star_10.png" id="11_omv2o"]
+[ext_resource type="Texture2D" uid="uid://cs25n3m54pobs" path="res://kenney_space-shooter-redux/PNG/Star/star_11.png" id="12_bmxhp"]
+[ext_resource type="Script" uid="uid://dfoodkdlgvyp5" path="res://scenes/star.gd" id="13_2dxbk"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6l51u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_g4ep7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_s0git")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4nmqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3qv0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_twfhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_np3v5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jmoh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kmh0x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_jttqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pybc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_omv2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_bmxhp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="Star" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_6l51u")
+autoplay = "default"
+script = ExtResource("13_2dxbk")
