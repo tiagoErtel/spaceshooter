@@ -1,18 +1,53 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu78nvi4d4h3t"]
+[gd_scene load_steps=10 format=3 uid="uid://bu78nvi4d4h3t"]
 
 [ext_resource type="Script" uid="uid://df06ejn3ljl34" path="res://scenes/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://dw7edrjfo4udi" path="res://kenney_space-shooter-redux/PNG/playerShip1_blue.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://cawehtg2kgwo2" path="res://sprites/spaceship/spaceship_0.png" id="2_fjrip"]
+[ext_resource type="Texture2D" uid="uid://s04buddruk8c" path="res://sprites/spaceship/spaceship_1.png" id="3_smehm"]
+[ext_resource type="Texture2D" uid="uid://cqagt7xqwrvm1" path="res://sprites/spaceship/spaceship_2.png" id="4_ur7pv"]
+[ext_resource type="Texture2D" uid="uid://bd15cwfs10c8e" path="res://sprites/spaceship/spaceship_3.png" id="5_y4r1p"]
+[ext_resource type="Texture2D" uid="uid://88fs33ihiq4s" path="res://sprites/spaceship/spaceship_4.png" id="6_d2wvv"]
+[ext_resource type="Texture2D" uid="uid://c4nsxsj1rssm" path="res://sprites/spaceship/spaceship_5.png" id="7_3v2ag"]
+[ext_resource type="AudioStream" uid="uid://bd8p6caqgubgc" path="res://sound/Shoot.wav" id="8_smehm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jej6c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_fjrip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_smehm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ur7pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_y4r1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d2wvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3v2ag")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 6
 script = ExtResource("1_g2els")
 
-[node name="PlayerImage" type="Sprite2D" parent="."]
-texture = ExtResource("2_qhqgy")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.499995, -0.499999)
+sprite_frames = SubResource("SpriteFrames_jej6c")
+autoplay = "default"
+frame_progress = 0.0787564
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(1, 0)
-polygon = PackedVector2Array(9, -37, 12, -12, 35, 1, 48, -7, 47, 24, 13, 28, 7, 38, -9, 38, -15, 28, -48, 23, -50, -7, -36, 1, -12, -12, -9, -37)
+position = Vector2(0, -8)
+polygon = PackedVector2Array(0, -22, -6, -17, -6, -5, -8, -4, -8, 0, -10, 2, -10, 11, -23, 17, -23, 29, -8, 22, 7, 22, 22, 29, 22, 17, 9, 11, 9, 2, 7, 0, 7, -4, 5, -5, 5, -18)
 
 [node name="LaserStartPosition" type="Marker2D" parent="."]
 position = Vector2(0, -10)
@@ -21,5 +56,9 @@ scale = Vector2(0.552804, 31.4504)
 [node name="LaserCooldown" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[node name="LaserSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_smehm")
+volume_db = 4.637
 
 [connection signal="timeout" from="LaserCooldown" to="." method="_on_laser_cooldown_timeout"]

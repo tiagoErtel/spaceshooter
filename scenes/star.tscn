@@ -1,57 +1,81 @@
 [gd_scene load_steps=15 format=3 uid="uid://c35t1dvfyap4h"]
 
-[ext_resource type="Texture2D" uid="uid://dtqxtf80m1nka" path="res://kenney_space-shooter-redux/PNG/Star/star_00.png" id="1_g4ep7"]
-[ext_resource type="Texture2D" uid="uid://dbcx14ok4bvjx" path="res://kenney_space-shooter-redux/PNG/Star/star_01.png" id="2_s0git"]
-[ext_resource type="Texture2D" uid="uid://be3fvtjrfmyd6" path="res://kenney_space-shooter-redux/PNG/Star/star_02.png" id="3_4nmqm"]
-[ext_resource type="Texture2D" uid="uid://lcht1jaw14bp" path="res://kenney_space-shooter-redux/PNG/Star/star_03.png" id="4_3qv0s"]
-[ext_resource type="Texture2D" uid="uid://c7pcqbww6ye6r" path="res://kenney_space-shooter-redux/PNG/Star/star_04.png" id="5_twfhd"]
-[ext_resource type="Texture2D" uid="uid://p1cul01140k6" path="res://kenney_space-shooter-redux/PNG/Star/star_05.png" id="6_np3v5"]
-[ext_resource type="Texture2D" uid="uid://dmau038ktge81" path="res://kenney_space-shooter-redux/PNG/Star/star_06.png" id="7_jmoh7"]
-[ext_resource type="Texture2D" uid="uid://b1nymvcjnv7wr" path="res://kenney_space-shooter-redux/PNG/Star/star_07.png" id="8_kmh0x"]
-[ext_resource type="Texture2D" uid="uid://d3le38w4cq51y" path="res://kenney_space-shooter-redux/PNG/Star/star_08.png" id="9_jttqs"]
-[ext_resource type="Texture2D" uid="uid://bu4knwln4m5n0" path="res://kenney_space-shooter-redux/PNG/Star/star_09.png" id="10_pybc0"]
-[ext_resource type="Texture2D" uid="uid://cvpavypcqon4i" path="res://kenney_space-shooter-redux/PNG/Star/star_10.png" id="11_omv2o"]
-[ext_resource type="Texture2D" uid="uid://cs25n3m54pobs" path="res://kenney_space-shooter-redux/PNG/Star/star_11.png" id="12_bmxhp"]
 [ext_resource type="Script" uid="uid://dfoodkdlgvyp5" path="res://scenes/star.gd" id="13_2dxbk"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mcqwg"]
+load_path = "res://.godot/imported/star_00.png-d58ccc015cf6da505cae365e76db9d06.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_j6vao"]
+load_path = "res://.godot/imported/star_01.png-da9e399c0bd396185c0c641baf082730.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ef0hr"]
+load_path = "res://.godot/imported/star_02.png-a31570428463fffc097e9ada0a5f56f2.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8d8bx"]
+load_path = "res://.godot/imported/star_03.png-22045edc2385eb4febbfc5b9ed68abae.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_8lrp4"]
+load_path = "res://.godot/imported/star_04.png-30e0d08795a119ca479fbf6c32cb948a.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sxbdi"]
+load_path = "res://.godot/imported/star_05.png-bc74ea281ed8308f5d62d81a962d3286.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pexwv"]
+load_path = "res://.godot/imported/star_06.png-756cc9cd6443c70e6e80cdf639b60521.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fi7gj"]
+load_path = "res://.godot/imported/star_07.png-287937efad80849479a4a51808a63572.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cwpl5"]
+load_path = "res://.godot/imported/star_08.png-6d3635b358d3f9b35eaeefbb1cdb1038.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pt5mf"]
+load_path = "res://.godot/imported/star_09.png-834ccb54ce2ffd0cce2261e50e8984e3.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mpmlc"]
+load_path = "res://.godot/imported/star_10.png-3f2af9f3225216ca0a98bdd862269dbf.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lj1jy"]
+load_path = "res://.godot/imported/star_11.png-38faacb1f9196da4f960c6febd11281e.ctex"
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6l51u"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_g4ep7")
+"texture": SubResource("CompressedTexture2D_mcqwg")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_s0git")
+"texture": SubResource("CompressedTexture2D_j6vao")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_4nmqm")
+"texture": SubResource("CompressedTexture2D_ef0hr")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_3qv0s")
+"texture": SubResource("CompressedTexture2D_8d8bx")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_twfhd")
+"texture": SubResource("CompressedTexture2D_8lrp4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_np3v5")
+"texture": SubResource("CompressedTexture2D_sxbdi")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_jmoh7")
+"texture": SubResource("CompressedTexture2D_pexwv")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_kmh0x")
+"texture": SubResource("CompressedTexture2D_fi7gj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_jttqs")
+"texture": SubResource("CompressedTexture2D_cwpl5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_pybc0")
+"texture": SubResource("CompressedTexture2D_pt5mf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_omv2o")
+"texture": SubResource("CompressedTexture2D_mpmlc")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_bmxhp")
+"texture": SubResource("CompressedTexture2D_lj1jy")
 }],
 "loop": true,
 "name": &"default",

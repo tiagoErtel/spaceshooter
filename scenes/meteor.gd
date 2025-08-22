@@ -17,8 +17,8 @@ func _ready():
 	position = Vector2(random_x, random_y)
 	
 	var textures = [
-		"res://kenney_space-shooter-redux/PNG/Meteors/meteorBrown_big1.png",
-		"res://kenney_space-shooter-redux/PNG/Meteors/meteorGrey_big1.png"
+		"res://sprites/meteor/meteor_0.png",
+		"res://sprites/meteor/meteor_1.png"
 	]
 	
 	var texture = load(textures[rng.randi_range(0,1)])
@@ -36,3 +36,9 @@ func _process(delta):
 
 func _on_body_entered(_body: Node2D) -> void:
 	collision.emit()
+	call_deferred("queue_free")
+
+
+func _on_area_entered(area):
+	area.call_deferred("queue_free")
+	call_deferred("queue_free")
