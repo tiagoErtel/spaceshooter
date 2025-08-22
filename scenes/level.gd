@@ -28,7 +28,10 @@ func _on_meteor_collision():
 	ui.set_health(player.health)
 
 	if not player.is_alive:
-		get_tree().change_scene_to_file("res://game_over.tscn")
+		call_deferred("_go_to_game_over")
+
+func _go_to_game_over():
+	get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 
 
 func _on_player_laser(pos):
