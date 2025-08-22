@@ -6,7 +6,6 @@ var life_ico = load("res://sprites/spaceship/spaceship_0.png")
 @onready var score_label = $MarginContainer/ScoreLabel
 
 func set_health(amount):
-	print(amount)
 	for child in health_bar.get_children():
 		child.call_deferred("queue_free")
 		
