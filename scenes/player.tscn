@@ -1,53 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://bu78nvi4d4h3t"]
+[gd_scene load_steps=4 format=3 uid="uid://bu78nvi4d4h3t"]
 
 [ext_resource type="Script" uid="uid://df06ejn3ljl34" path="res://scenes/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://cawehtg2kgwo2" path="res://sprites/spaceship/spaceship_0.png" id="2_fjrip"]
-[ext_resource type="Texture2D" uid="uid://s04buddruk8c" path="res://sprites/spaceship/spaceship_1.png" id="3_smehm"]
-[ext_resource type="Texture2D" uid="uid://cqagt7xqwrvm1" path="res://sprites/spaceship/spaceship_2.png" id="4_ur7pv"]
-[ext_resource type="Texture2D" uid="uid://bd15cwfs10c8e" path="res://sprites/spaceship/spaceship_3.png" id="5_y4r1p"]
-[ext_resource type="Texture2D" uid="uid://88fs33ihiq4s" path="res://sprites/spaceship/spaceship_4.png" id="6_d2wvv"]
-[ext_resource type="Texture2D" uid="uid://c4nsxsj1rssm" path="res://sprites/spaceship/spaceship_5.png" id="7_3v2ag"]
+[ext_resource type="Texture2D" uid="uid://dly32ijg4m78n" path="res://sprites/Spaceship.png" id="2_qhqgy"]
 [ext_resource type="AudioStream" uid="uid://bd8p6caqgubgc" path="res://sound/Shoot.wav" id="8_smehm"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_jej6c"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_fjrip")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_smehm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_ur7pv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("5_y4r1p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_d2wvv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_3v2ag")
-}],
-"loop": true,
-"name": &"default",
-"speed": 6.0
-}]
 
 [node name="Player" type="CharacterBody2D"]
 collision_mask = 6
 script = ExtResource("1_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-0.499995, -0.499999)
-sprite_frames = SubResource("SpriteFrames_jej6c")
-autoplay = "default"
-frame_progress = 0.0787564
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_qhqgy")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(0, -8)
-polygon = PackedVector2Array(0, -22, -6, -17, -6, -5, -8, -4, -8, 0, -10, 2, -10, 11, -23, 17, -23, 29, -8, 22, 7, 22, 22, 29, 22, 17, 9, 11, 9, 2, 7, 0, 7, -4, 5, -5, 5, -18)
+build_mode = 1
+polygon = PackedVector2Array(-1, -16, 1, -16, 3, -14, 3, -5, 5, -3, 5, 1, 9, 1, 9, 0, 10, -1, 15, -1, 16, 0, 16, 3, 9, 10, 4, 10, 4, 13, 1, 16, -1, 16, -4, 13, -4, 10, -9, 10, -16, 3, -16, 0, -15, -1, -10, -1, -9, 0, -9, 1, -5, 1, -5, -3, -3, -5, -3, -14)
 
 [node name="LaserStartPosition" type="Marker2D" parent="."]
 position = Vector2(0, -10)

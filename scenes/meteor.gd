@@ -2,6 +2,8 @@ extends Area2D
 
 signal collision
 
+var max_speed := 1000
+var base_speed := 500
 var speed: int
 var rotation_speed: int
 var direction_x: float
@@ -24,7 +26,9 @@ func _ready():
 	var texture = load(textures[rng.randi_range(0,1)])
 	$MeteorImage.texture = texture
 	
-	speed = rng.randi_range(300, 500)
+	speed = base_speed + Global.score
+	speed = clamp(speed, base_speed, max_speed)
+	
 	rotation_speed = rng.randi_range(-10, 10)
 	direction_x = rng.randf_range(-1, 1)
 

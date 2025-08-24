@@ -6,6 +6,9 @@ extends Node2D
 @onready var lasers = $Lasers
 @onready var stars = $Stars
 
+var meteor_min_wait_time := 0.1
+var meteor_base_wait_time := 1.0
+
 var meteor_scene: PackedScene = load("res://scenes/meteor.tscn")
 var laser_scene: PackedScene = load("res://scenes/laser.tscn")
 var star_scene: PackedScene = load("res://scenes/star.tscn")
@@ -48,3 +51,6 @@ func _on_stars_timer_timeout():
 func _on_score_timer_timeout():
 	Global.score += 1
 	ui.update_score()
+
+	var new_wait_time = meteor_base_wait_time - (Global.score * 0.01)
+	$MeteorTimer.wait_time = clamp(new_wait_time, meteor_min_wait_time, meteor_base_wait_time)

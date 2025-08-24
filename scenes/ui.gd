@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-var life_ico = load("res://sprites/spaceship/spaceship_0.png")
+var life_ico = load("res://sprites/life.png")
 @onready var health_bar = $MarginContainer2/HealthBar
 
 @onready var score_label = $MarginContainer/ScoreLabel

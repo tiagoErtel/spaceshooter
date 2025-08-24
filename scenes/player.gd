@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 var health: int = 5
 var is_alive: bool = true
-var speed : int = 500
+var speed : int = 200
 var can_shoot: bool = true
 
 signal laser(pos)
