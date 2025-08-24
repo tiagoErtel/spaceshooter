@@ -2,8 +2,8 @@ extends Area2D
 
 signal collision
 
-var max_speed := 1000
-var base_speed := 500
+var max_speed := 500
+var base_speed := 20
 var speed: int
 var rotation_speed: int
 var direction_x: float
